@@ -1,69 +1,54 @@
 body {
   margin: 0;
-  padding: 0;
+  overflow: hidden;
   background-image: url("./Image/back.png");
+}
+
+#game-area {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: #000000;
+  margin: 50px auto;
+  border: 10px solid rgb(49, 48, 48);
   overflow: hidden;
 }
-/*---------------------------------------------------*/
 
-/* style for the game area */
-#gameArea {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-#game-status {
-  flex-direction: column;
-  display: flex;
-  margin: auto;
-  padding: 0;
-  font-family: Arial;
-  text-align: center;
-  font-size: 30px;
-  color: white;
-}
-#game-Over {
-  flex-direction: column;
-  display: flex;
-  margin: auto;
-  padding: 0;
-  font-family: Arial;
-  text-align: center;
-  font-size: 30px;
-  color: white;
-  display: none;
-}
-
-/*---------------------------------------------------*/
-.ship,
-.alien,
-.bullet {
+#player {
   position: absolute;
-  background-color: none;
-}
-.ship {
-  width: 50px;
-  height: 50px;
-  bottom: 20px;
-}
-.alien {
   width: 40px;
-  height: 40px;
-  background-color: none;
-}
-
-.pausedText {
-  position: absolute;
-  top: 50%;
+  height: 20px;
+  background: lime;
+  bottom: 10px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 30px;
-  color: white;
-  display: none;
+  transform: translateX(-50%);
 }
-/*---------------------------------------------------*/
 
-/* bullet type for the ship */
+#pause-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none; /* Hidden by default */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.enemy {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: red;
+}
+
 .bullet {
   position: absolute;
   width: 5px;
@@ -82,48 +67,5 @@ body {
   100% {
     transform: scale(1.1);
     opacity: 0.8;
-  }
-}
-
-/* Laser-like alternative */
-.bullet-laser {
-  position: absolute;
-  width: 3px;
-  height: 15px;
-  background: linear-gradient(to bottom, #00d2ff, #3498db);
-  box-shadow: 0 0 5px #00d2ff, 0 0 10px #3498db, 0 0 15px #ffffff;
-  animation: laser-pulse 0.3s infinite alternate;
-}
-
-@keyframes laser-pulse {
-  0% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1.2);
-    opacity: 0.7;
-  }
-}
-
-/* Plasma-like alternative */
-.bullet-plasma {
-  position: absolute;
-  width: 6px;
-  height: 12px;
-  background: radial-gradient(circle at center, #00ff87, #60efff);
-  border-radius: 50%;
-  box-shadow: 0 0 8px #00ff87, 0 0 15px #60efff, 0 0 20px #ffffff;
-  animation: plasma-glow 0.25s infinite alternate;
-}
-
-@keyframes plasma-glow {
-  0% {
-    transform: scale(0.9);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1.1);
-    opacity: 1;
   }
 }
