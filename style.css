@@ -1,7 +1,9 @@
 body {
   margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-image: url("./Image/back.png");
+  background-image: url(./Image/back.png);
+  background-repeat: no-repeat;
 }
 
 #game-area {
@@ -10,7 +12,7 @@ body {
   height: 400px;
   background: #000000;
   margin: 50px auto;
-  border: 10px solid rgb(49, 48, 48);
+  border: 15px solid rgb(53, 52, 52);
   overflow: hidden;
 }
 
@@ -20,8 +22,6 @@ body {
   height: 20px;
   background: lime;
   bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 #pause-menu {
@@ -42,16 +42,27 @@ body {
   text-align: center;
 }
 
+#lives-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  z-index: 10;
+}
+
 .enemy {
   position: absolute;
   width: 40px;
-  height: 20px;
+  height: 40px;
   background: red;
+  border-radius: 50%;
 }
 
 .bullet {
   position: absolute;
-  width: 5px;
+  width: 4px;
   height: 10px;
   background: linear-gradient(to bottom, #ff6b6b, #ff4757);
   border-radius: 50% 50% 0 0;
