@@ -17,7 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Main game loop
   const gameLoop = () => {
-    enemies.forEach((enemy) => enemy.moveDown());
+    enemies.forEach((enemy) => {
+      enemy.moveDown();
+      livesManager.handleEnemyReachBottom(enemy, enemies, gameInterval);
+    });
+
+    bullets.forEach((bullet, bulletIndex) => {
+      bullet.moveUp();
+      bullet.handleEnemyCollision(enemies);
+
+      // Remove bullet if it is destroyed
+      if (bullet.isDestroyed) {
+        bullets.splice(bulletIndex, 1);
+      }
+    });
   };
 
   // Start the game loop
