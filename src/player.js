@@ -6,10 +6,10 @@ class Player {
 
     // Set the initial position of the player to the center of the game area
     const gameRect = this.gameArea.getBoundingClientRect();
-    const playerWidth = this.element.offsetWidth; // Get the width of the player
-    const initialLeft = gameRect.width / 2 - playerWidth / 2; // Calculate the center position
-    this.element.style.position = "absolute"; // Ensure the player is positioned absolutely
-    this.element.style.left = `${initialLeft}px`; // Set the initial left position
+    const playerWidth = this.element.offsetWidth;
+    const initialLeft = gameRect.width / 2 - playerWidth / 2;
+    this.element.style.position = "absolute";
+    this.element.style.left = `${initialLeft}px`;
 
     // Bind event listeners for movement
     document.addEventListener("keydown", this.move.bind(this));
