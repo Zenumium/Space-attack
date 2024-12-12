@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./Image/back.png");
+  overflow: hidden;
+}
+/*---------------------------------------------------*/
+
+/* style for the game area */
+#gameArea {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+#game-status {
+  flex-direction: row;
+  display: flex;
+  margin: auto;
+  padding: 0;
+  font-family: Arial;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+#game-Over {
+  flex-direction: column;
+  display: flex;
+  margin: auto;
+  padding: 0;
+  font-family: Arial;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  display: none;
+}
+#score {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  color: white;
+}
+/*---------------------------------------------------*/
+.ship,
+.alien,
+.bullet {
+  position: absolute;
+  background-color: none;
+}
+.ship {
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+}
+.alien {
+  width: 40px;
+  height: 40px;
+  background-color: none;
+}
+
+.pausedText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
+  display: none;
+}
+/*---------------------------------------------------*/
+
+/* bullet type for the ship */
+.bullet {
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  background: linear-gradient(to bottom, #ff6b6b, #ff4757);
+  border-radius: 50% 50% 0 0;
+  box-shadow: 0 0 5px #ff4757, 0 0 10px #ff6b6b, 0 0 15px #ff9ff3;
+  animation: bullet-trail 0.2s infinite alternate;
+}
+
+@keyframes bullet-trail {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Laser-like alternative */
+.bullet-laser {
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background: linear-gradient(to bottom, #00d2ff, #3498db);
+  box-shadow: 0 0 5px #00d2ff, 0 0 10px #3498db, 0 0 15px #ffffff;
+  animation: laser-pulse 0.3s infinite alternate;
+}
+
+@keyframes laser-pulse {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1.2);
+    opacity: 0.7;
+  }
+}
+
+/* Plasma-like alternative */
+.bullet-plasma {
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  background: radial-gradient(circle at center, #00ff87, #60efff);
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ff87, 0 0 15px #60efff, 0 0 20px #ffffff;
+  animation: plasma-glow 0.25s infinite alternate;
+}
+
+@keyframes plasma-glow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
