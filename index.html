@@ -3,22 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Space Invaders</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <p id="game-status"></p>
-    <div id="gameArea">
-      <div class="ship" id="ship">
-        <img
-          id="ship"
-          src="./Image/Spaceship1.png"
-          class="ship"
-          alt="Player's Spaceship"
-        />
-      </div>
+    <div id="pause-menu">
+      <h1>Paused</h1>
+      <p>Press Escape to Resume</p>
     </div>
-
-    <script src="./src/game.js"></script>
+    <div id="game-area">
+      <div id="player"></div>
+    </div>
+    <script src="./src/enemy.js"></script>
+    <script src="./src/bullet.js"></script>
+    <script src="./src/player.js"></script>
+    <script src="./src/main.js"></script>
+    <script src="./src/pause.js"></script>
   </body>
 </html>
