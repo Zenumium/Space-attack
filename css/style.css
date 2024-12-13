@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url(../Image/back.png);
+  background-repeat: no-repeat;
+  font-family: system-ui;
+}
+.main-menu {
+  text-align: center;
+  color: white;
+}
+
+.main-menu h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  -webkit-text-stroke: 1.5px rgb(119, 0, 255);
+}
+
+.main-menu button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background: linear-gradient(to bottom, #ff6b6b, #ff4757);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.instructions {
+  align-items: center;
+  font-size: 1.5rem;
+  color: aqua;
+}
+
+.game-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.player,
+.enemy,
+.bullet {
+  position: absolute;
+}
+/* bullet type for the ship */
+.bullet {
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  background: linear-gradient(to bottom, #ff6b6b, #ff4757);
+  border-radius: 50% 50% 0 0;
+  box-shadow: 0 0 5px #ff4757, 0 0 10px #ff6b6b, 0 0 15px #ff9ff3;
+  animation: bullet-trail 0.2s infinite alternate;
+}
+@keyframes bullet-trail {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.Copyright {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+}
