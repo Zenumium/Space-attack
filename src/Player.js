@@ -6,7 +6,7 @@ class Player {
     this.gameHeight = gameHeight;
     this.x = gameWidth / 2 - this.width / 2;
     this.y = gameHeight - this.height - 10;
-    this.speed = 10;
+    this.speed = 20;
     this.element = this.createPlayerElement();
   }
 
