@@ -1,6 +1,6 @@
 class Game {
   constructor() {
-    this.gameWidth = 800;
+    this.gameWidth = 900;
     this.gameHeight = 600;
     this.gameContainer = null;
     this.player = null;
@@ -8,7 +8,7 @@ class Game {
     this.playerBullets = [];
     this.enemyBullets = [];
     this.score = 0;
-    this.lives = 3;
+    this.lives = 0;
     this.gameOver = false;
   }
 

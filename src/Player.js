@@ -18,7 +18,6 @@ class Player {
     player.style.position = "absolute";
     player.style.left = `${this.x}px`;
     player.style.bottom = "10px";
-    player.style.backgroundColor = "green";
     return player;
   }
 
