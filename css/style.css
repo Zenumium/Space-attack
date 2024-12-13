@@ -33,6 +33,7 @@ body {
 }
 
 .game-container {
+  top: 20px;
   position: relative;
   overflow: hidden;
 }
