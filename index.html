@@ -3,23 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Classic Space Invaders Game" />
+    <meta
+      name="keywords"
+      content="Space Invaders, JavaScript Game, Arcade Game"
+    />
+    <meta name="author" content="AquaRider" />
+
     <title>Space Invaders</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="" />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="lives-container">Lives: <span id="lives-count">3</span></div>
-    <div id="pause-menu">
-      <h1>Paused</h1>
-      <p>Press Escape to Resume</p>
+    <div id="main-content" role="main">
+      <!-- Game container will be dynamically populated by JavaScript -->
     </div>
-    <div id="game-area">
-      <div id="player"></div>
-    </div>
-    <script src="./src/enemy.js"></script>
-    <script src="./src/bullet.js"></script>
-    <script src="./src/player.js"></script>
-    <script src="./src/main.js"></script>
-    <script src="./src/pause.js"></script>
-    <script src="./src/live.js"></script>
+
+    <!-- Game Scripts in correct order -->
+    <script src="./src/Player.js"></script>
+    <script src="./src/Enemy.js"></script>
+    <script src="./src/Bullet.js"></script>
+    <script src="./src/Game.js"></script>
+    <script src="./src/MainMenu.js"></script>
   </body>
 </html>
