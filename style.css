@@ -5,78 +5,32 @@ body {
   background-image: url(./Image/back.png);
   background-repeat: no-repeat;
 }
+.main-menu {
+  text-align: center;
+  color: white;
+}
 
-#game-area {
+.main-menu h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.main-menu button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.game-container {
   position: relative;
-  width: 600px;
-  height: 400px;
-  background: #000000;
-  margin: 50px auto;
-  border: 15px solid rgb(53, 52, 52);
   overflow: hidden;
 }
 
-#player {
-  position: absolute;
-  width: 40px;
-  height: 20px;
-  background: lime;
-  bottom: 10px;
-}
-
-#pause-menu {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  display: none; /* Hidden by default */
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-#lives-container {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: white;
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  z-index: 10;
-}
-
-.enemy {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: red;
-  border-radius: 50%;
-}
-
+.player,
+.enemy,
 .bullet {
   position: absolute;
-  width: 4px;
-  height: 10px;
-  background: linear-gradient(to bottom, #ff6b6b, #ff4757);
-  border-radius: 50% 50% 0 0;
-  box-shadow: 0 0 5px #ff4757, 0 0 10px #ff6b6b, 0 0 15px #ff9ff3;
-  animation: bullet-trail 0.2s infinite alternate;
-}
-
-@keyframes bullet-trail {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
 }
