@@ -43,6 +43,10 @@ body {
 .bullet {
   position: absolute;
 }
+.player {
+  background-image: url(../Image/Spaceship1.png);
+  background-repeat: no-repeat;
+}
 /* bullet type for the ship */
 .bullet {
   position: absolute;
