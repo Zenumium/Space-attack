@@ -12,7 +12,7 @@ class MainMenu {
                 <button id="start-game">Start Game</button>
                 <div class="instructions">
                     <p>Use Arrow Keys to Move</p>
-                    <p>Spacebar to Shoot</p>
+                    <p>Use Spacebar to Shoot the enemies</p>
                 </div>
             </div>
         `;
