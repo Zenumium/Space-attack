@@ -8,7 +8,7 @@ class Game {
     this.playerBullets = [];
     this.enemyBullets = [];
     this.score = 0;
-    this.lives = 0;
+    this.lives = 3;
     this.gameOver = false;
   }
 
@@ -20,7 +20,7 @@ class Game {
     this.gameContainer.style.height = `${this.gameHeight}px`;
     this.gameContainer.style.position = "relative";
     this.gameContainer.style.margin = "0 auto";
-    this.gameContainer.style.backgroundColor = "black";
+    this.gameContainer.style.backgroundColor = "#000000";
     document.body.appendChild(this.gameContainer);
 
     // Create player (pass both gameWidth and gameHeight)
