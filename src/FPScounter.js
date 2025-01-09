@@ -5,7 +5,6 @@ let frameCount = 0;
 
 function render(now) {
   now *= 0.001; // convert to seconds
-  const deltaTime = now - then;
   then = now;
   frameCount++;
 
@@ -21,4 +20,3 @@ function render(now) {
 
 let lastFpsUpdate = 0;
 requestAnimationFrame(render);
-
